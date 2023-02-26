@@ -12,8 +12,17 @@ class Student(Person):
 class Teacher(Person):
   salary = 0
   student = []
+   
+  def __init__(self):
+    super().__init__("Teacher")
+   
+  def work(self):
+    self.salary += 2500
 
 student = Student()
+teacher = Teacher()
 student.study()
 print(student.grade)
+teacher.work()
+print(teacher.work)
 
